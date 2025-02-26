@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My AI Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <main>
+        <section id="blog-posts">
+            <article class="post">
+                <h2>Understanding AI: The Basics</h2>
+                <p>Published on: February 26, 2025</p>
+                <p class="excerpt">Artificial Intelligence (AI) is transforming various industries. In this post, we will explore the fundamentals of AI...</p>
+                <button onclick="toggleContent('post1')">Read More</button>
+                <div id="post1" class="full-content" style="display:none;">
+                    <p>AI refers to the simulation of human intelligence in machines...</p>
+                </div>
+            </article>
+
+            <article class="post">
+                <h2>Machine Learning vs Deep Learning</h2>
+                <p>Published on: February 25, 2025</p>
+                <p class="excerpt">Machine learning and deep learning are both subsets of AI. In this post, we’ll differentiate the two...</p>
+                <button onclick="toggleContent('post2')">Read More</button>
+                <div id="post2" class="full-content" style="display:none;">
+                    <p>Machine learning is a method of data analysis that automates analytical model building...</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My AI Blog. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+#blog-posts {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.excerpt {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.full-content {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+}
+// JavaScript to toggle the visibility of the full post content
+function toggleContent(postId) {
+    var content = document.getElementById(postId);
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
